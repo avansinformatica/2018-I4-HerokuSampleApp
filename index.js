@@ -5,8 +5,6 @@ var express     = require('express');
 // Create the application
 var app = express();
 
-app.set('PORT', config.webPort);
-
 app.all('*', function(req, res, next){
     console.log( req.method + " " + req.url);
     next();
@@ -25,7 +23,7 @@ app.use('/apiv1', require('./routes/routes_apiv1'));
 app.use('/apiv2', require('./routes/routes_apiv2'));
 
 // Start the server
-var port = process.env.PORT || app.get('PORT');
+var port = process.env.PORT || config.port;
 
 app.listen(port, function() {
     console.log('The magic happens at http://localhost:' + port);

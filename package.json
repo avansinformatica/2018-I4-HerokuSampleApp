@@ -6,7 +6,7 @@
   "scripts": {
     "test_default": "echo \"Error: no test specified\" && exit 1",
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "start": "nodem 2018-I4-HerokuSampleApp.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
